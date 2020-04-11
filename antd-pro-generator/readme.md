@@ -4,7 +4,7 @@
 
 ## 截图
 
-![](E:\code\vscode\antd-pro-generator\screen_shot.png)
+![](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot.png)
 
 ## 使用说明
 
