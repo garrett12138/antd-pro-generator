@@ -12,11 +12,11 @@
 
 vscode插件项目
 
-### lib
+### antd-generator-core
 
 核心代码库，api文档解析代码生成的主要代码
 
-### ui
+### antd-generator-ui
 
 插件UI，使用ant design 4 组件库
 
@@ -33,7 +33,7 @@ vscode插件项目
 
 2. 在 ant-design-pro-dva-generator、lib、ui目录分别执行 npm install
 
-3. 在ui目录下运行 npm start，ui运行端口默认3000，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
+3. 在antd-generator-ui目录下运行 npm start，ui运行端口默认3000，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
 
    ## 调试web.js 和lib
 
