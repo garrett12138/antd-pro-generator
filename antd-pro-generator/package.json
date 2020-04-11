@@ -1,0 +1,40 @@
+{
+    "name": "ant-generator",
+    "displayName": "Ant-Generator",
+    "description": "ant design pro service,mock,models generator",
+    "publisher": "Garrett",
+    "version": "0.0.2",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.antdGenerator"
+    ],
+    "main": "./src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.antdGenerator",
+                "title": "Ant Design Pro Code Generator"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "hash.js": "^1.1.7",
+        "antd-generator-core": "file:../antd-generator-core"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}

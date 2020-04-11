@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "antd-pro-generator",
+			"path": "antd-pro-generator"
+		},
+		{
+			"path": "antd-generator-core"
+		},
+		{
+			"path": "antd-generator-ui"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off"
+	}
+}
