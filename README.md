@@ -27,7 +27,7 @@ vscode插件项目
 
 ## vscode插件运行
 
-发布到插件市场失败，还不能从市场安装
+View--->Command Platte..., 查找 Ant Design Pro Code Generator 项运行
 
 ##　开发运行
 
