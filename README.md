@@ -4,7 +4,10 @@
 
 ## 截图
 
-![截图](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot.png)
+![](screen_shot.png)
+
+![](screen_shot2.png)
+
 
 ## 项目结构
 
@@ -30,9 +33,11 @@ vscode插件项目
 
 1. git clone 
 
-2. 在 ant-design-pro-dva-generator、lib、ui目录分别执行 npm install
+2. 在 ant-design-pro-dva-generator、antd-generator-core、antd-generator-ui目录分别执行 npm install
 
-3. 在antd-generator-ui目录下运行 npm start，ui运行端口默认3000，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
+3. 先build一下antd-generator-core，如果antd-generator-core有修改，也要build一样其它两个项目才能引用到最新的代码。
+
+4. 在antd-generator-ui目录下运行 npm start，ui运行端口默认3000，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
 
 ## 调试web.js 和lib
 
@@ -64,6 +69,44 @@ vscode插件项目
 
    3. 在命令行执行 npm run ui
 
+##　调试vscode插件
+
+1. 调试配置
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+			"name": "Run Extension",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			]
+		},
+		{
+			"name": "Extension Tests",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionTestsPath=${workspaceFolder}/test/index"
+			]
+		}
+    ]
+}
+```
+
+2. 修改package.json中入口文件项改成 "main": "./src/extension"，发布修改回"main": "./dist/extension"。
+3. 运行调试
+
+
 ## 使用说明
 
 1. 选择从Url或者从本地文件加载接口文档，输入Url或者文件路径，然后load。显示文档信息，按tag分组，每个tag对应一个service/mock/model的js文件，文件名为tag名称。
@@ -73,4 +116,6 @@ vscode插件项目
 
 
  
+
+
 

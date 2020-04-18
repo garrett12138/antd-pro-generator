@@ -3,18 +3,14 @@
 const vscode = require("vscode");
 const fs = require("fs");
 const path = require("path");
-const {
-  ApiObjectBuilder,
-  generate,
-  commandType
-} = require("antd-generator-core");
+const { ApiObjectBuilder, generate, commandType } = require("../lib");
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
   // register service generator
   let serviceDisposable = vscode.commands.registerCommand(
-    "extension.antdGenerator",
+    "extension.garrett-antd-generator",
     function() {
       const _servicePanel = vscode.window.createWebviewPanel(
         "AntdesignCodeGenerator", // viewType

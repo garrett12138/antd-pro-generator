@@ -1,4 +1,4 @@
-const { convertFile, convertUrl, convertObj } = require("swagger2openapi");
+const { convertFile, convertObj } = require("./converter");
 const {
   arrayToMap,
   objectToArray,

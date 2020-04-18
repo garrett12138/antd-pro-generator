@@ -16,7 +16,7 @@ import {
 } from "@ant-design/icons";
 import webService from "../webService";
 import extService from "../extService";
-import { operateType, objectToMap } from "antd-generator-core";
+import { operateType, objectToMap } from "./constants";
 import "./App.css";
 
 const caseType = {
