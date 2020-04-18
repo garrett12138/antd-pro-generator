@@ -4,9 +4,9 @@
 
 ## 截图
 
-![](screen_shot.png)
+![截图](./screen_shot.png)
 
-![](screen_shot2.png)
+![截图](./screen_shot2.png)
 
 
 ## 项目结构
@@ -75,9 +75,6 @@ vscode插件项目
 
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
