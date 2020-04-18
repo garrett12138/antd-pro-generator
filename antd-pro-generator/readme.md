@@ -4,7 +4,9 @@
 
 ## 截图
 
-![](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot.png)
+![](../screen_shot.png)
+
+![](../screen_shot2.png)
 
 ## 使用说明
 

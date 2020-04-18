@@ -1,40 +1,52 @@
 {
-    "name": "ant-generator",
-    "displayName": "Ant-Generator",
+    "name": "vs-code-garrett-ant-generator",
+    "displayName": "Ant Design Pro Generator",
     "description": "ant design pro service,mock,models generator",
-    "publisher": "Garrett",
+    "publisher": "garrett",
     "version": "0.0.2",
+    "icon": "icon.png",
     "engines": {
         "vscode": "^1.29.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/garrett12138/antd-pro-generator.git"
     },
     "categories": [
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.antdGenerator"
+        "onCommand:extension.garrett-antd-generator"
     ],
-    "main": "./src/extension",
+    "main": "./dist/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.antdGenerator",
+                "command": "extension.garrett-antd-generator",
                 "title": "Ant Design Pro Code Generator"
             }
         ]
     },
     "scripts": {
+        "vscode:prepublish": "webpack --mode production",
+        "webpack": "webpack --mode development",
+        "webpack-dev": "webpack --mode development --watch",
+        "test-compile": "tsc -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
     },
     "dependencies": {
-        "hash.js": "^1.1.7",
-        "antd-generator-core": "file:../antd-generator-core"
+        "hash.js": "^1.1.7"
     },
     "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "eslint": "^4.11.0",
+        "ts-loader": "^7.0.0",
         "typescript": "^2.6.1",
         "vscode": "^1.1.21",
-        "eslint": "^4.11.0",
-        "@types/node": "^8.10.25",
-        "@types/mocha": "^2.2.42"
-    }
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    },
+    "license": "MIT"
 }
