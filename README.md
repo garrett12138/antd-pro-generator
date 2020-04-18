@@ -4,7 +4,7 @@
 
 ## 截图
 
-![](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot.png)
+![截图](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot.png)
 
 ## 项目结构
 
@@ -34,7 +34,7 @@ vscode插件项目
 
 3. 在antd-generator-ui目录下运行 npm start，ui运行端口默认3000，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
 
-   ## 调试web.js 和lib
+## 调试web.js 和lib
 
    1. 在ui项目建调试配置，配置详情如下：
 
