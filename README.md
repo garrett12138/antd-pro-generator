@@ -29,7 +29,7 @@ vscode插件项目
 
 View--->Command Platte..., 查找 Ant Design Pro Code Generator 项运行
 
-##　开发运行
+## 开发运行
 
 1. git clone 
 
@@ -69,7 +69,7 @@ View--->Command Platte..., 查找 Ant Design Pro Code Generator 项运行
 
    3. 在命令行执行 npm run ui
 
-##　调试vscode插件
+## 调试vscode插件
 
 1. 调试配置
 
