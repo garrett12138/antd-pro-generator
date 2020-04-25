@@ -37,9 +37,9 @@ View--->Command Platte..., 查找 Ant Design Pro Code Generator 项运行
 
 3. 先build一下antd-generator-core，如果antd-generator-core有修改，也要build一样其它两个项目才能引用到最新的代码。
 
-4. 在antd-generator-ui目录下运行 npm start，ui运行端口默认3000，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
+4. 在antd-generator-ui目录下运行 npm start，ui运行端口默认3001，同时运行一个express 服务器，端口8081，web请求的链接通过代理到8081
 
-## 调试web.js 和lib
+## 调试web.js 和antd-generator-core
 
    1. 在ui项目建调试配置，配置详情如下：
 

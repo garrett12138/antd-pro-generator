@@ -4,9 +4,11 @@
 
 ## 截图
 
-![](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot.png)
 
-![](https://github.com/garrett12138/antd-pro-generator/blob/master/screen_shot2.png)
+![](https://github.com/garrett12138/antd-pro-generator/raw/master/screen_shot.png)
+
+![](https://github.com/garrett12138/antd-pro-generator/raw/master/screen_shot2.png)
+
 
 ## 使用说明
 

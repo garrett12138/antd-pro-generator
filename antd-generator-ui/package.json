@@ -29,8 +29,8 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "concurrently \"nodemon web.js\" \"react-app-rewired start\"",
-    "ui": "react-app-rewired start",
+    "start": "concurrently \"nodemon web.js\" \"set PORT=3001 && react-app-rewired start\"",
+    "ui": "set PORT=3001 && react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test"
   },

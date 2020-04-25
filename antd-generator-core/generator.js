@@ -44,28 +44,34 @@ function generate(genParam) {
         summary,
         operate,
         reducer,
+        effect,
         state,
         successText,
         name: serviceFunction
       } = api;
-      effects.push({
-        name: effectName,
-        summary: summary,
-        service: name,
-        serviceFunction,
-        operate,
-        reducer,
-        state,
-        successText
-      });
-      if (operate === operateType.PUT_REDUCER) {
-        states.push({ name: state, type: "object", value: "undefined" });
-        reducers.push({ name: reducer, stateName: state });
+      if (effect) {
+        effects.push({
+          name: effectName,
+          summary: summary,
+          service: name,
+          serviceFunction,
+          operate,
+          reducer,
+          state,
+          successText
+        });
+        if (operate === operateType.PUT_REDUCER) {
+          states.push({ name: state, type: "object", value: "undefined" });
+          reducers.push({ name: reducer, stateName: state });
+        }
       }
     }
     return { name, namespace, states, reducers, effects };
   });
-  generateModels(models, modelPath);
+  generateModels(
+    models.filter(m => m.effects.length > 0),
+    modelPath
+  );
 }
 
 function generateModels(models, distPath) {
