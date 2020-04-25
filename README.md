@@ -27,9 +27,9 @@ vscode插件项目
 
 ## vscode插件运行
 
-发布到插件市场失败，还不能从市场安装
+View--->Command Platte..., 查找 Ant Design Pro Code Generator 项运行
 
-##　开发运行
+## 开发运行
 
 1. git clone 
 
@@ -69,7 +69,7 @@ vscode插件项目
 
    3. 在命令行执行 npm run ui
 
-##　调试vscode插件
+## 调试vscode插件
 
 1. 调试配置
 
