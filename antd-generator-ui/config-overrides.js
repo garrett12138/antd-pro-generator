@@ -2,8 +2,6 @@ const {
   override,
   fixBabelImports,
   removeModuleScopePlugin,
-  addWebpackResolve,
-  addWebpackModuleRule,
   overrideDevServer,
   watchAll
 } = require("customize-cra");
@@ -63,18 +61,21 @@ module.exports = {
   ),
   devServer: overrideDevServer(
     // dev server plugin
-    config => ({
-      ...config,
-      proxy: {
-        "/": {
-          target: "http://localhost:8081",
-          changeOrigin: true,
-          pathRewrite: {
-            "^/": ""
+    config => {
+      console.log("config....", config);
+      return {
+        ...config,
+        proxy: {
+          "/": {
+            target: "http://localhost:8081",
+            changeOrigin: true,
+            pathRewrite: {
+              "^/": ""
+            }
           }
         }
-      }
-    }),
+      };
+    },
     watchAll()
   )
 };

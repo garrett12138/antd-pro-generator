@@ -95,6 +95,7 @@ function resolve(apiDoc) {
       queryParams: [],
       formParams: [],
       headerParams: [],
+      effect: true,
       name: obj.operationId,
       effectName: obj.operationId,
       description: obj.description,

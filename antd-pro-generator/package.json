@@ -3,7 +3,7 @@
     "displayName": "Ant Design Pro Generator",
     "description": "ant design pro service,mock,models generator",
     "publisher": "garrett",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.29.0"

@@ -7,7 +7,8 @@ import {
   Form,
   message,
   Radio,
-  Modal
+  Modal,
+  Checkbox
 } from "antd";
 import {
   EditOutlined,
@@ -16,7 +17,8 @@ import {
 } from "@ant-design/icons";
 import webService from "../webService";
 import extService from "../extService";
-import { operateType, objectToMap } from "./constants";
+import { operateType } from "./constants";
+import { objectToMap } from "antd-generator-core/utils";
 import "./App.css";
 
 const caseType = {
@@ -182,7 +184,7 @@ class App extends Component {
     for (let tag of data.tags.values()) {
       const apis = tag.apis.filter(api => selectKeySet.has(api.key));
       for (let api of apis.values()) {
-        if (api.stateEditting && api.state === "") {
+        if (api.stateEditting && api.state === "" && api.effect) {
           api.stateError = true;
           this.setState({ data: { ...data } });
           message.error("state name is required!", 2, () =>
@@ -190,7 +192,7 @@ class App extends Component {
           );
           return false;
         }
-        if (api.effectEditting && api.effectName === "") {
+        if (api.effectEditting && api.effectName === "" && api.effect) {
           api.effectError = true;
           this.setState({ data: { ...data } });
           message.error("effect name is required!", 2, () =>
@@ -291,9 +293,30 @@ class App extends Component {
     },
     {
       title: "Effect",
+      colSpan: 2,
+      dataIndex: "effect",
+      width: 20,
+      render: (val, record) => {
+        return (
+          <Checkbox
+            onChange={e => {
+              record.effect = e.target.checked;
+              this.setState({ data: { ...this.state.data } });
+            }}
+            checked={val}
+          ></Checkbox>
+        );
+      }
+    },
+    {
+      title: "EffectName",
+      colSpan: 0,
       dataIndex: "effectName",
       width: 160,
       render: (val, record) => {
+        if (record.effect === false) {
+          return "";
+        }
         const accept = value => {
           if (value === "") {
             message.error("effectName is required!");
@@ -348,6 +371,9 @@ class App extends Component {
       dataIndex: "operate",
       width: 240,
       render: (val, record) => {
+        if (record.effect === false) {
+          return "";
+        }
         let text = "";
         switch (val) {
           case operateType.PUT_REDUCER:
@@ -375,6 +401,9 @@ class App extends Component {
       title: "State",
       dataIndex: "state",
       render: (val, record) => {
+        if (record.effect === false) {
+          return "";
+        }
         if (record.operate !== operateType.PUT_REDUCER) {
           return "";
         }
