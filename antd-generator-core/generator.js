@@ -222,7 +222,7 @@ function generateMethod(method) {
         rs += ` formData.append('${pm.name}',${pm.name});`;
       });
 
-      rs += `options.body=formData;`;
+      rs += `options.data=formData;`;
     }
   }
   if (
@@ -230,7 +230,7 @@ function generateMethod(method) {
     method.requestBody.content &&
     method.formParams.length === 0
   ) {
-    rs += `options.body=rest;`;
+    rs += `options.data=rest;`;
   }
   rs += ` return request(url, options);
     } `;

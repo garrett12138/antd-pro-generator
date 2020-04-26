@@ -1,7 +1,7 @@
 {
     "name": "antd-generator-core",
     "description": "generator lib",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "main": "./dist/index.js",
     "dependencies": {
         "axios": "^0.19.2",
