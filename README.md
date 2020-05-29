@@ -1,6 +1,7 @@
 # Ant Design Pro Code Generator
 
 从 Swagger 2.x 和 [OpenApi规范3.x](https://swagger.io/specification/) 的json描述文档生成 [Ant Design Pro](https://pro.ant.design/index-cn) 项目中的service,mock,model代码。当前支持生成es6代码，暂时不支持生成typescipt代码。
+vscode插件市场地址：[https://marketplace.visualstudio.com/items?itemName=garrett.vs-code-garrett-ant-generator](https://marketplace.visualstudio.com/items?itemName=garrett.vs-code-garrett-ant-generator)
 
 ## 截图
 
